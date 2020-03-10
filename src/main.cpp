@@ -1,5 +1,5 @@
 #include "Intersection.h"
-#define DEBUG
+//#define DEBUG
 //#define PERF
 
 int main(int argc, char* argv[]) {

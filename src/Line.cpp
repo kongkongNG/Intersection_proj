@@ -81,16 +81,24 @@ vector<Point> Line::getInterPoint(Geomtry* obj) {
 			x = this->x;
 			y = ln->k * x + ln->b;
 		}
-		else if (this->isVerticalToY()) {
-			y = this->b;
-			if (ln->isVerticalToX()) {
-				x = ln->x;
-			}
-			else {
-				x = (y - ln->b) / ln->k;
-			}
+		//else if (this->isVerticalToY()) {
+		//	y = this->b;
+		//	if (ln->isVerticalToX()) {
+		//		x = ln->x;
+		//	}
+		//	else {
+		//		x = (y - ln->b) / ln->k;
+		//	}
+		//}
+		else if (ln->isVerticalToX()) {
+			x = ln->x;
+			y = this->k * x + this->b;
 		}
-		else {
+		//else if (ln->isVerticalToY()) {
+		//	y = ln->b;
+		//	x = (y - ln->b) / ln->k
+		//}
+		else {			// no need to consider vertical to y because we can handle it
 			x = (ln->b - this->b) / (this->k - ln->k);
 			y = this->k * x + this->b;
 		}

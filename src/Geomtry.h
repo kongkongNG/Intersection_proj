@@ -4,7 +4,7 @@
 #include <math.h>
 #include <iostream>
 #include <vector>
-#define EPS 1e-7
+#define EPS 1e-6
 
 using namespace std;
 
@@ -13,6 +13,7 @@ enum Type {
 };
 
 struct Point {
+	int id;
 	double x, y;
 
 	Point(double x, double y) : x(x), y(y) {}
@@ -23,7 +24,7 @@ struct Point {
 			return false;
 		}
 		else {
-			return x < p.x;
+			return (x!=p.x)? x < p.x : y < p.y;
 		}
 		
 	}

@@ -15,7 +15,7 @@ bool Circle::isInterset(Geomtry* obj) {
 		Circle* cc = dynamic_cast<Circle*>(obj);
 		double dcenter = sqrt((n - cc->n) * (n - cc->n) 
 			+ (m - cc->m) * (m - cc->m));	// d = sqrt((x1-x2)^2 + (y1-y2)^2)
-		if (dcenter > r + cc->r) {
+		if (dcenter > r + cc->r || dcenter < fabs(r - cc->r) ) {
 			return false;
 		}
 		else {
