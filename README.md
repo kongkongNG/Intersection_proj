@@ -1,4 +1,4 @@
-## 一、数学准备
+## 一、数学准备(无法查看公式[参考这里](https://blog.csdn.net/bitcarmanlee/article/details/87829033))
 (直线：$y=kx+b,圆：(x-n)^2+(y-m)^2=r^2$)
 
 ### 0 已知点求直线k，b公式
@@ -45,7 +45,10 @@ $x = \frac{-b\pm \sqrt{b^2-4ac}}{2a}$
 
 本次项目中采用博客中的解法二，其中解法二的最终交点结果有误，经计算更正为：
 
-$\left\{\begin{matrix}x_c=x_0-\frac{h}{d}(y2-y1)\\y_c=y_0+\frac{h}{d}(x2-x1)  \\\end{matrix}\right. 或 \left\{\begin{matrix}x_d=x_0+\frac{h}{d}(y2-y1)\\y_c=y_0-\frac{h}{d}(x2-x1)  \\\end{matrix}\right.$
+<!-- $\left\{\begin{matrix}x_c=x_0-\frac{h}{d}(y2-y1)\\y_c=y_0+\frac{h}{d}(x2-x1)  \\\end{matrix}\right. 或 \left\{\begin{matrix}x_d=x_0+\frac{h}{d}(y2-y1)\\y_c=y_0-\frac{h}{d}(x2-x1)  \\\end{matrix}\right.$ -->
+
+<!-- ![](assets/md_2020-03-10-18-50-53.png) -->
+![md_2020-03-10-18-50-53.png](https://i.loli.net/2020/03/10/7rNLuMpoZk4SbFY.png)
 
 
 ## 二、类设计
