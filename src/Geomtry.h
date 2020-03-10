@@ -4,7 +4,7 @@
 #include <math.h>
 #include <iostream>
 #include <vector>
-#define EPS 1e-6
+#define EPS 1e-7
 
 using namespace std;
 
@@ -13,7 +13,6 @@ enum Type {
 };
 
 struct Point {
-	int id;
 	double x, y;
 
 	Point(double x, double y) : x(x), y(y) {}
@@ -33,7 +32,7 @@ struct Point {
 class Geomtry {
 
 public:
-	int type;
+	int type = -1;
 	virtual bool isInterset(Geomtry* obj) = 0;
 	virtual vector<Point> getInterPoint(Geomtry* obj) = 0;
 	static vector<double> solve(double a, double b, double c) {	// solve ax^2 + bx + c = 0

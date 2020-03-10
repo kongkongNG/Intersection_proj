@@ -2,16 +2,22 @@
 
 Line::Line(int x1, int y1, int x2, int y2) {
 	this->type = LINE;
+	
 	if (x1 == x2) {
 		verToX = true;
 		this->x = (double)x1;
+		this->k = 0.0;
+		this->b = 0.0;
 	}
-	if (y1 == y2) {
-		verToY = true;
+	else {
+		if (y1 == y2) {
+			verToY = true;
+		}
+		this->x = 0.0;
+		this->k = 1.0 * ((double)y2 - y1) / ((double)x2 - x1);
+		this->b = 1.0 * y1 - this->k * x1;
 	}
-
-	this->k = 1.0 * (y2 - y1) / (x2 - x1);
-	this->b = 1.0 * y1 - this->k * x1;
+	
 }
 
 bool Line::isInterset(Geomtry* obj) {
@@ -35,7 +41,6 @@ bool Line::isInterset(Geomtry* obj) {
 				return true;
 			}
 		}
-
 		return fabs(this->k - ln->k) > EPS;
 	}
 	else if (obj->type == CIRCLE) {

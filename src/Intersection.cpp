@@ -27,7 +27,6 @@ int Intersection::count_intersection() {
 			if (gmt->isInterset(*it)) {
 				vector<Point> pvec = gmt->getInterPoint(*it);
 				for (auto pIt = pvec.begin(); pIt != pvec.end(); pIt++) {
-					pIt->id = points.size();
 					points.insert(*pIt);
 				}
 			}
@@ -77,7 +76,6 @@ void Intersection::count_intersection(string fileIn, string fileOut) {
 			if (gmt->isInterset(*it)) {
 				vector<Point> pvec = gmt->getInterPoint(*it);
 				for (auto pIt = pvec.begin(); pIt != pvec.end(); pIt++) {
-					pIt->id = points.size();
 					points.insert(*pIt);
 				}
 			}
